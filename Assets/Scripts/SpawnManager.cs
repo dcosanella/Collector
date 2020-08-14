@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
 
     private GameObject[] m_platforms;
     private GameManager m_gameManager;
+    private Coroutine m_spawnCoroutine;
 
     [SerializeField]
     private Coin m_coin;
@@ -45,26 +46,32 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //m_elapsedTime += Time.deltaTime;
-        //if (m_elapsedTime > m_spawnRate)
-        //{
-        //    m_spawnRate = Time.time + m_gameManager.GetSpawnRate();
-        //}
+
     }
 
     public void SpawnRain(float spawnRate)
     {
-        StartCoroutine(SpawnRainCoroutine(spawnRate));
+        m_spawnCoroutine = StartCoroutine(SpawnRainCoroutine(spawnRate));
+    }
+
+    public void UpdateSpawnCoroutine(float spawnRate)
+    {
+        if (m_spawnCoroutine != null)
+        {
+            StopCoroutine(m_spawnCoroutine);
+        }
+
+        SpawnRain(spawnRate);
     }
 
     IEnumerator SpawnRainCoroutine(float spawnRate)
     {
-        yield return new WaitForSeconds(spawnRate);
+        yield return new WaitForSeconds(0.5f);
         while (true)
         {
             float xPosition = Random.Range(-8.7f, 8.7f);
             Instantiate(m_rain, new Vector3(xPosition, 5, 0), Quaternion.identity);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(3f - spawnRate);
         }
     }
 

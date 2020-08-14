@@ -49,6 +49,11 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         m_scoreText.text = "Score: " + score.ToString();
+
+        if (score != 0 && score % 5 == 0)
+        {
+            m_gameManager.IncreaseSpawnRate();
+        }
     }
 
     private void LoadHighScore()

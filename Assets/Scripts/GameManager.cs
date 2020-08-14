@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     private SpawnManager m_spawnManager;
 
+    [SerializeField]
     private float m_spawnRate = 1f;
 
     private bool m_gameOver = false;
@@ -36,5 +37,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         m_gameOver = true;
+    }
+
+    public void IncreaseSpawnRate()
+    {
+        m_spawnRate += 0.1f;
+        m_spawnManager.UpdateSpawnCoroutine(m_spawnRate);
     }
 }
