@@ -21,21 +21,21 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_platforms = GameObject.FindGameObjectsWithTag("Platform");
+        m_platforms = GameObject.FindGameObjectsWithTag(SceneAssets.Platform);
         if (m_platforms.Length == 0)
         {
-            Debug.LogError("Platforms not found");
+            Debug.LogError(ErrorMessages.PlatformsNotFound);
         }
 
-        m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        m_gameManager = GameObject.Find(SceneManagers.GameManager).GetComponent<GameManager>();
         if (!m_gameManager)
         {
-            Debug.LogError("Game Manager not found");
+            Debug.LogError(ErrorMessages.GameMgrNotFound);
         }
 
         if (!m_coin)
         {
-            Debug.LogError("Coin GameObject is not defined");
+            Debug.LogError(ErrorMessages.CoinNotFound);
         }
 
         SpawnCoin();
@@ -90,10 +90,10 @@ public class SpawnManager : MonoBehaviour
         m_lastCoinLocation = platform;
 
         Platform surface = m_platforms[platform].GetComponent<Platform>();
-        Transform location = surface.transform.Find("SpawnLocation");
+        Transform location = surface.transform.Find(SceneAssets.SpawnLocation);
         if (!location)
         {
-            Debug.LogError("Spawn location not found");
+            Debug.LogError(ErrorMessages.SpawnLocationNotFound);
         }
 
         Instantiate(m_coin, location.transform.position, Quaternion.identity);

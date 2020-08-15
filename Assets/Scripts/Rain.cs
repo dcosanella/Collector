@@ -12,7 +12,7 @@ public class Rain : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == PlayerAttributes.Tag)
         {
             // Destroy player. Game over
             Destroy(other.gameObject);
@@ -26,13 +26,13 @@ public class Rain : MonoBehaviour
         m_rigidBody = GetComponent<Rigidbody2D>();
         if (!m_rigidBody)
         {
-            Debug.LogError("Rigidbody not found");
+            Debug.LogError(ErrorMessages.RigidBodyNotFound);
         }
 
-        m_uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        m_uiManager = GameObject.Find(SceneAssets.Canvas).GetComponent<UIManager>();
         if (!m_uiManager)
         {
-            Debug.LogError("UI Manager not found");
+            Debug.LogError(ErrorMessages.UIMgrNotFound);
         }
     }
 

@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+        m_spawnManager = GameObject.Find(SceneManagers.SpawnManager).GetComponent<SpawnManager>();
         if (!m_spawnManager)
         {
-            Debug.LogError("Spawn Manager not found");
+            Debug.LogError(ErrorMessages.SpawnMgrNotFound);
         }
 
         //m_spawnManager.SpawnCoin();

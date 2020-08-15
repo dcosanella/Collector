@@ -47,13 +47,13 @@ public class PlayerController : MonoBehaviour
         m_rigidBody = GetComponent<Rigidbody2D>();
         if (!m_rigidBody)
         {
-            Debug.LogError("Rigidbody not found");
+            Debug.LogError(ErrorMessages.RigidBodyNotFound);
         }
 
-        m_uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        m_uiManager = GameObject.Find(SceneAssets.Canvas).GetComponent<UIManager>();
         if (!m_uiManager)
         {
-            Debug.Log("UI Manager not found");
+            Debug.Log(ErrorMessages.UIMgrNotFound);
         }
 
         m_rigidBody.freezeRotation = true;
@@ -62,9 +62,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_moveInput = Input.GetAxis("Horizontal") * m_speed;
+        m_moveInput = Input.GetAxis(PlayerAttributes.Horizontal) * m_speed;
 
-        if (m_isGrounded && Input.GetButton("Jump"))
+        if (m_isGrounded && Input.GetButton(PlayerAttributes.Jump))
         {
             m_rigidBody.velocity = Vector2.up * m_jumpSpeed;
         }
