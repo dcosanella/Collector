@@ -103,9 +103,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void UpdateScore(int score)
+    public void UpdateScore()
     {
-        m_score += score;
+        ++m_score;
         m_uiManager.UpdateScore(m_score);
     }
 }

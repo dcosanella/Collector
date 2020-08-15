@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private int m_coinValue = 1;
     private SpawnManager m_spawnManager;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -14,7 +13,7 @@ public class Coin : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
             if (player)
             {
-                player.UpdateScore(m_coinValue);
+                player.UpdateScore();
             }
 
             Destroy(this.gameObject);
