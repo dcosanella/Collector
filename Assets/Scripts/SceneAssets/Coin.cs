@@ -5,8 +5,6 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     private int m_coinValue = 1;
-
-    [SerializeField]
     private SpawnManager m_spawnManager;
 
     private void OnTriggerEnter2D(Collider2D other)

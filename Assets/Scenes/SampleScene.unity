@@ -424,7 +424,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 949730314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d41aa5238516564daa2f86f8adb067d, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c707808acacbe45873afc497398c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_spawnRate: 1
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169312396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ed056090e62934c974a5f84ade1874, type: 3}
+  m_Script: {fileID: 11500000, guid: 60b1453702509e34187c7ef9f2398ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 6
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208422641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e9068713da3ce418d00033e27b7ce3, type: 3}
+  m_Script: {fileID: 11500000, guid: ef6d08e8a15ab1041a980a9378fbde29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_highScoreText: {fileID: 1314336286}
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1682960420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88397cdc14134e4aab3a8bf178c5de2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a1ecf71e05c66140ba1eb4eebc9c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_coin: {fileID: 9029205826453507969, guid: 873c6437614138c4b953502e7453e652, type: 3}
