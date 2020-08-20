@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1ecf71e05c66140ba1eb4eebc9c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_coin: {fileID: 9029205826453507969, guid: 873c6437614138c4b953502e7453e652, type: 3}
+  m_coin: {fileID: -5831714783718564742, guid: b9a740eea3d442642bdc09e842a2de68, type: 3}
   m_rain: {fileID: 4136173651420968587, guid: 23fe005743e86e14d959b62c7d6acb6a, type: 3}
 --- !u!4 &1682960422
 Transform:
@@ -1355,6 +1355,11 @@ PrefabInstance:
     - target: {fileID: 559672336, guid: 31b1c8c545d170b42b21239448b0880e, type: 3}
       propertyPath: m_player
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451116242089140283, guid: 31b1c8c545d170b42b21239448b0880e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 559672336, guid: 31b1c8c545d170b42b21239448b0880e, type: 3}
